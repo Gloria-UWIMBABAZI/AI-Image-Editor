@@ -21,7 +21,7 @@ def outpaint():
     return 1
 
 @app.route("/deblur")
-def outpaint():
+def deblur():
     # Should be provided a base image
     # Should call a function that runs the AI-model once, then shuts it down
     # Returns the generated image
