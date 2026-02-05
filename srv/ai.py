@@ -10,7 +10,8 @@ def run_inpaint(image, mask):
 
 def run_outpaint(image, directions):
     # Call and Run
-    return
+    # Modify images to add borders and run this as a convolution of inpaint
+    return run_inpaint(mod_image, new_mask)
 
 def run_deblur(image):
     # Call and Run
