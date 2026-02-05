@@ -1,5 +1,4 @@
 import torch
-from diffusers import AutoPipelineForInpainting
 from diffusers.utils import load_image
 
 # These might be changed later to implement Redis, which would allow us to queue jobs.

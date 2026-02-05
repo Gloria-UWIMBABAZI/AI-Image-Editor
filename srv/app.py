@@ -1,4 +1,4 @@
-from flask import Flask
+from flask import Flask, request, jsonify
 from ai import run_inpaint, run_outpaint, run_deblur
 
 app = Flask(__name__)
@@ -19,8 +19,7 @@ def inpaint():
 
     return send_file(
         output_path,
-        mimetype="image/png",
-        as_attachment=False
+        mimetype="image/png"
     )
 
 @app.route("/outpaint", methods=["POST"])
@@ -47,3 +46,7 @@ def deblur():
     output_path = run_deblur(request.files["image"])
 
     return send_file(output_path, mimetype="image/png")
+
+def send_file(output_path, mimetype):
+    # Non-Functional, for testing
+    return jsonify({"success": "image"}), 200
