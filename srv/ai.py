@@ -29,10 +29,9 @@ def run_inpaint(image, mask, prompt=None):
         )
     return result.images[0]
 
-
 def run_outpaint(image, directions, prompt=None):
     w, h = image.size
-    
+
     x = directions.get("x", 0)
     y = directions.get("y", 0)
 
