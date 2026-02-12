@@ -9,20 +9,40 @@ export default function App() {
   const [toolboxCollapsed, setToolboxCollapsed] = useState(false);
   const [propertiesOpen, setPropertiesOpen] = useState(true);
 
+  const [activeTool, setActiveTool] = useState("select");
+
+  // Brush options 
+  const [brushColor, setBrushColor] = useState("#ff3b30");
+  const [brushSize, setBrushSize] = useState(12);
+
+  const handleToolSelect = (tool) => {
+    setActiveTool(tool);
+  };
+
   return (
     <div className="flex h-screen w-screen flex-col">
       <MenuBar />
 
-      {/* In the App we will be using lucide-react icons */}
       <div className="flex min-h-0 flex-1">
         <ToolBox
           collapsed={toolboxCollapsed}
           onToggle={() => setToolboxCollapsed((v) => !v)}
+          activeTool={activeTool}
+          onToolSelect={handleToolSelect}
+          // pass brush controls to toolbox 
+          brushColor={brushColor}
+          brushSize={brushSize}
+          onBrushColorChange={setBrushColor}
+          onBrushSizeChange={setBrushSize}
         />
 
-        <CanvasArea />
+        <CanvasArea
+          activeTool={activeTool}
+          // pass brush options to canvas 
+          brushColor={brushColor}
+          brushSize={brushSize}
+        />
 
-        {/* Right panel hidden on small screens by default */}
         <div className="hidden lg:block">
           <PropertiesPanel
             open={propertiesOpen}
