@@ -48,7 +48,7 @@ export default function ToolBox({ collapsed, onToggle, onCanvasAction, activeToo
 
         <button
           onClick={onToggle}
-          className="inline-flex h-9 w-9 items-center justify-center rounded-lg hover:bg-white/10"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-lg hover:bg-white/10"
           aria-label={collapsed ? "Expand toolbox" : "Collapse toolbox"}
         >
           {collapsed ? <ChevronRight className="h-4 w-4" /> : <ChevronLeft className="h-4 w-4" />}
