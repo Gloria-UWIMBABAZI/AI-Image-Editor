@@ -126,9 +126,6 @@ class: default
 
 - Designed to update dynamically based on selected object
 
---- 
-
-
 ---
 
 # Supported Editing Functions
@@ -146,6 +143,21 @@ class: default
   - Text Tool: Click to place editable text objects
   - Brush Tool: Free-drawing with adjustable color and size
 
+- Implemented API to run AI functions (Gabe)
+  - Inpainting and Describe
+
+---
+
+# Editing Functions to be Supported by System
+
+<!-- ai-enabled or otherwise -->
+- Planning on implementing:
+  - Crop function
+  - Deblurring
+  - Inpainting/Outpainting
+  - Background removal
+  - Image Adjustments
+
 - Implemented API to run AI functions
   - Inpainting and Describe
 ---
@@ -158,8 +170,10 @@ class: default
 
 ---
 # Implementation Plan
-
 - Integrate the AI API endpoints as functions in the frontend
+- Backend optimization to prevent errors
+- Finalize UI design to ensure all AI/non-AI tools are working
+- Testing/Validation
 
 ---
 

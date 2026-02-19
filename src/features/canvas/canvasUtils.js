@@ -1,6 +1,4 @@
-
 import { PencilBrush, Textbox, IText } from "fabric";
-
 
 const toolModes = {
   select: enableSelectMode,
@@ -9,7 +7,6 @@ const toolModes = {
   text: enableTextMode,
   brush: enableBrushMode, 
 };
-
 
 function enableSelectMode(canvas) {
   canvas.isDrawingMode = false;
@@ -41,7 +38,6 @@ export function setToolMode(canvas, mode = "select", options = {}) {
 
   canvas.requestRenderAll();
 }
-
 
 function resetCanvasState(canvas) {
   canvas.isDrawingMode = false;
