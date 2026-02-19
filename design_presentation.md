@@ -115,20 +115,20 @@ class: default
 --- 
 
 # Implementation Status 
-- We designed UI
+- We designed UI (Gloria and Aaliyah)
 
-- We implemented some of the tools in the Toolbox:
+- We implemented some of the tools in the Toolbox: (Gloria and Nickson)
   - Select Tool: Move, resize, and select objects
   - Erase Tool: Draws mask paths using Fabric’s brush system
   - Text Tool: Click to place editable text objects
   - Brush Tool: Free-drawing with adjustable color and size
 
-- Implemented API to run AI functions
+- Implemented API to run AI functions (Gabe)
   - Inpainting and Describe
 
 ---
 
-# Supported Editing Functions
+# Editing Functions to be Supported by System
 
 <!-- ai-enabled or otherwise -->
 - Planning on implementing:
@@ -148,8 +148,10 @@ class: default
 
 ---
 # Implementation Plan
-
 - Integrate the AI API endpoints as functions in the frontend
+- Backend optimization to prevent errors
+- Finalize UI design to ensure all AI/non-AI tools are working
+- Testing/Validation
 
 ---
 
